@@ -20,4 +20,4 @@ function Car(manufacture, model, color, releaseYear, fuelConnsumption, volume) {
   this.fuelConnsumption = fuelConnsumption + "л/км";
   this.volume = volume;
 }
-const car1 = new Car("Mersedes", "E-class", "black", "2022", "3", "3");
+const car1 = new Car("Mersedes", "E-class", "black", "2022", "3", "80");
