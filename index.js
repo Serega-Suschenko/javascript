@@ -17,10 +17,7 @@ function Car(manufacture, model, color, releaseYear, fuelConnsumption, volume) {
   this.model = model;
   this.color = color;
   this.releaseYear = releaseYear;
-  this.fuelConnsumption = fuelConnsumption;
+  this.fuelConnsumption = fuelConnsumption + "л/км";
   this.volume = volume;
-  if (fuelConnsumption) {
-    return fuelConnsumption + "л/100км";
-  }
 }
 const car1 = new Car("Mersedes", "E-class", "black", "2022", "3", "3");
