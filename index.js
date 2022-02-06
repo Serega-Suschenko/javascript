@@ -1,95 +1,108 @@
-// const even = function(num){
-//  if (num % 2 === 0){
-//    return 'even'
-//  } else { return 'odd'}
-//}
-//const n = +prompt("Введите целое число.");
-//alert(even(n));
+"use strict";
+///////////////////////////////////////////
+const arrNumber1 = [1, 2, 3];
+const arrNumber2 = [4, 5, 6];
 //
-//
-//
-//const two = function(num1 , num2){
-//  if (num1 <= num2){return num1} else {return num2}
-//}
-//const x = +prompt("Введите число")
-//const y = +prompt ("Введите второе число")
-//alert (two(x,y))
-//
-//
-//
-//const money = function(num1 , num2){
-//  if (num1 >= num2){return 'Денег хватает'} else {return 'Денег мало'}
-//}
-//const x1 = +prompt("Количество денег")
-//const y2 = +prompt ("Введите сумму")
-//alert (money(x1,y2))
+const arrNumberConcat = arrNumber1.concat(arrNumber2);
+// 
+const arrNumberReversed = arrNumber1.reverse();
+// 
+const arrNumberPush = arrNumber1.push(4, 5, 6);
+const arrNumberUnshift = arrNumber1.unshift(4, 5, 6);
+/////////////////////////////////////////// 
 
-function trafficlights(trafficcolor) {
-  const red = "red";
-  const yellow = "yellow";
-  const green = "green";
-  if (trafficcolor === red) {
-    return "Стоп";
-  } else if (trafficcolor === yellow) {
-    return "Приготовились";
-  } else if (trafficcolor === green) {
-    return "Гоу";
-  }
-}
 
-//let num1 = Number(prompt("первое число"));
-//let num2 = Number(prompt("второе число"));
-//let operator = prompt("напиши оператор(/,+,*, -)");
-//function calc(num1, num2, operator) {
-//  let result;
-//  switch (operator) {
-//    case "-":
-//      result = num1 - num2;
-//      break;
-//    case "+":
-//      result = num1 + num2;
-//      break;
-//    case "*":
-//      result = num1 * num2;
-//      break;
-//    case "/":
-//      result = num1 / num2;
-//      break;
-//    default:
-//      alert("Такого оператора нет");
-//  }
-//  alert(result);
-//}
-//const result = calc(num1,num2,operator);
 
-function month(num) {
-  switch (num) {
-    case "12":
-    case "1":
-    case "2": {
-      console.log("Зима");
-      break;
+
+///////////////////////////////////////////
+const fileExtension = ["js", "css", "jq"];
+const fileExtensionShift = fileExtension.shift();
+const fileExtensionPop = fileExtension.pop();
+///////////////////////////////////////////
+
+
+
+///////////////////////////////////////////
+const numForSlice = [1, 2, 3, 4, 5];
+//
+const slice1 = numForSlice.slice(0, 3);
+//
+const slice2 = numForSlice.slice(-2);
+///////////////////////////////////////////
+
+
+
+///////////////////////////////////////////
+const numForSplice1 = [1, 2, 3, 4, 5];
+numForSplice1.splice(1, 2);
+//
+
+const numForSplice2 = [1, 2, 3, 4, 5];
+const splice = numForSplice2.splice(1, 3);
+//
+const numForSplice3 = [1, 2, 3, 4, 5];
+numForSplice3.splice(3, 0, "a", "b", "c");
+//
+const numForSplice4 = [1, 2, 3, 4, 5];
+numForSplice4.splice(1,0,"a","b");
+numForSplice4.splice(-1, 0, "c");
+numForSplice4.splice(8, 0, "e");
+///////////////////////////////////////////
+
+
+
+///////////////////////////////////////////
+const numForSortArr = [3, 4, 1, 2, 7];
+numForSortArr.sort();
+///////////////////////////////////////////
+
+
+
+///////////////////////////////////////////
+
+const arrWithObject = [
+  { firstName: "Test", lastName: "Testovich", age: 42, gender: "male" },
+  { firstName: "User", lastName: "Userovich", age: 12, gender: "male" },
+  { firstName: "Test`ya", lastName: "Testovna", age: 16, gender: "female" },
+  { firstName: "Logina", lastName: "Consol`evna", age: 42, gender: "female" },
+];
+arrWithObject.forEach(function callback(currentName) {
+  console.log(
+    `Пользователь ${currentName.firstName} ${currentName.lastName} являеться ${currentName.gender} и ему сейчас ${currentName.age} лет`
+  );
+});
+////////////////////////////////////////////
+  
+const telephoneNumber  = arrWithObject.map(function callbackMap (currentName) {
+    if (currentName) {
+      return {...currentName, telephone: "0506666666"}
     }
-    case "3":
-    case "4":
-    case "5": {
-      console.log("Весна");
-      break;
+  });
+
+  
+  
+  
+  const arrFilter = [
+    { firstName: 'Test', lastName: 'Testovich', age: 27, gender: 'male' },
+    { firstName: 'User', lastName: 'Userovich', age: 12, gender: 'male' },
+    { firstName: 'Test`ya', lastName: 'Testovna', age: 16, gender: 'female' },
+    { firstName: 'Logina', lastName: 'Consol`evna', age: 42, gender: 'female' },
+    { firstName: 'Undefined', lastName: 'Undefinovich', age: 99 },
+    { firstName: 'Null', lastName: 'Nullovich', gender: 'male' }
+  ]
+  
+  const FilterUsers = arrFilter.filter(function callbackFilter(currentName) {
+    if (currentName.age >= 18 && currentName.gender === "female") {
+      return currentName;
     }
-    case "6":
-    case "7":
-    case "8": {
-      console.log("Лето");
-      break;
-    }
-    case "9":
-    case "10":
-    case "11": {
-      console.log("Осень");
-      break;
-    }
-    default:{
-      console.log("Такого месяца нет")
-    }
-  }
-};
+  });
+
+
+  
+
+
+
+  
+  
+  
+  
