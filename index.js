@@ -97,6 +97,8 @@ const telephoneNumber  = arrWithObject.map(function callbackMap (currentName) {
     }
   });
 
+  const arrFlat = [1,2,3, [10,20,30, [100,200,300, [1000, 2000, 3000]]]];
+  const arrFlatNoArr = arrFlat.flat(Infinity);
 
   
 
