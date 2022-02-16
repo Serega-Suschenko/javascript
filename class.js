@@ -1,82 +1,41 @@
-class User {
-  constructor(name, surname, age){
+class Animal {
+  constructor(name, color) {
     this.name = name;
-    this.surname = surname;
-    this.age = age;
+    this.color = color;
+    this.eat = true;
+    this.move = true;
   }
-getFullName () {
-  return `${this.name} ${this.surname}`
-}
+ 
 }
 
-
-class Moder{
-constructor(name, surname, age, email){
-  this.name = name;
-  this.surname = surname;
-  this.age = age;
-  this.email = email;
+class Lion extends Animal {
+  constructor(name, color) {
+    super(name, color);
+  }
+  getVoice(){
+    return "рык"
+  }
 }
-getFullName () {
-  return `${this.name} ${this.surname}`
-};
-createMessage(){
-  return "Какието строки"
-};
 
-deleteMessage(){
-  return "удалено"
-};
-get name(){
-return this._name
-};
-
-set name (newName){
-if (typeof newName !== 'string'){
-  throw new TypeError('Имя не строка')
-};
-if (newName.trim() === ''){
-  throw new Error('Имя пустая строка');
-
-};
-this._name =newName;
-};
-get surname(){
-  return this._surname
-  };
-  
-  set surname (newSurname){
-  if (typeof newSurname !== 'string'){
-    throw new TypeError('Фамилия не строка')
-  };
-  if (newSurname.trim() === ''){
-    throw new Error('Фамилия пустая строка');
-  
-  };
-  this._surname =newSurname;
-};
- get age (){
-  return this._get
-  };
-  
-  set age (newAge){
-  if (typeof newAge !== 'number'){
-    throw new TypeError('Возраст не цыфра')
-  };
-  this._age = newAge;
-  };
-  get email(){
-    return this._email
-    };
-    
-    set email (newEmail){
-    if (typeof newEmail !== 'string'){
-      throw new TypeError('email не строка')
-    };
-    if (newEmail.trim() === ''){
-      throw new Error('email пустая строка');
-    
-    };
-    this._email =newEmail;
-};
+class Snake extends Animal {
+  constructor(name, color, lengthSnake) {
+    super(name, color,);
+    this.lengthSnake = lengthSnake;
+  }
+  getVoice(){
+    return "shhhhhhh"
+  }
 }
+
+class Trainer {
+  constructor(name) {
+    this.name = name;
+  }
+  commandVoice(animal){
+    return animal.getVoice;
+  };
+}
+
+const lion = new Lion("sharik", "black");
+const trainer = new Trainer("Gari");
+const snake = new Snake("Billy", "green", 18);
