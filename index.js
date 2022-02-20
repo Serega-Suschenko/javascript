@@ -1,35 +1,27 @@
-class MyArray {
-  constructor() {
-    this.length = 0;
+const gessNumber = (number) => {
+  let startNum = 0;
+  let endNum = number;
+  let middleNum = Math.round(endNum / 2);
+
+
+
+  while (true) {
+    let askNum = confirm(middleNum);
+
+    if (askNum === true) {
+      alert(middleNum);
+      return middleNum;
+    }
+    let isBiggerNum = confirm(`Bigger than? ${middleNum}`)
+
+    if (isBiggerNum === true) {
+      startNum = middleNum;
+      middleNum = Math.ceil((endNum + startNum) / 2);
+    } else {
+      endNum = middleNum;
+      middleNum = Math.floor((endNum + startNum) / 2);
+    }
   }
-  push = function (value) {
-    this[this.length] = value;
-    
-    this.length++;
-    
-    return this.length;
-  };
-  pop = function () {
-    let del = this[this.length - 1];
-    
-    delete this[this.length - 1];
-    
-    this.length--;
-    
-    return del;
-  };
-  forEach = function (callback) {
-    for (let i = 0; i < this.length; i++) {
-      callback(this[i], i, this);
-    }
-  };
   
-  map = function (callback) {
-    let result = new MyArray();
-    for (let i = 0; i < this.length; i++) {
-      let current = callback(this[i], i, this);
-      result.push(current);
-    }
-    return result;
-  };
+
 }
